@@ -36,8 +36,7 @@ class NotificationsCubit extends Cubit<NotificationsState> {
           error: null,
         ),
       );
-    } catch (e, stk) {
-      print('$e, $stk');
+    } catch (e) {
       emit(state.copyWith(isLoading: false, error: e));
     }
   }
